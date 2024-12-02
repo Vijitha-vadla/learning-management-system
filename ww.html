@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Web Development LMS</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <style>
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+
+        .float-animation {
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .logo-slider {
+            overflow: hidden;
+            white-space: nowrap;
+            position: relative;
+        }
+
+        .logo-slider-content {
+            display: inline-block;
+            animation: slide 30s linear infinite;
+        }
+
+        .logo-slider-content img {
+            height: 50px;
+            margin: 0 20px;
+        }
+
+        @keyframes slide {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+
+        .card {
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        .card.animate {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .bg-gradient {
+            background: linear-gradient(45deg, #4e54c8, #8f94fb);
+        }
+
+        .parallax {
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .text-shadow {
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .btn-hover {
+            transition: all 0.3s ease;
+        }
+
+        .btn-hover:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        @media (max-width: 768px) {
+            .card {
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="/placeholder.svg?height=30&width=30" alt="Logo" class="d-inline-block align-text-top">
+                WebDev LMS
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#features">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#modules">Modules</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#testimonials">Testimonials</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#pricing">Pricing</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="bg-gradient text-white text-center py-5 parallax" style="background-image: url('/placeholder.svg?height=600&width=1200');">
+        <div class="container">
+            <h1 class="display-4 mb-3 animate__animated animate__fadeInDown text-shadow">Master Web Development</h1>
+            <p class="lead mb-4 animate__animated animate__fadeInUp animate__delay-1s text-shadow">Learn HTML, CSS, JavaScript, and more with our comprehensive course</p>
+            <div class="float-animation animate__animated animate__zoomIn animate__delay-2s">
+                <i class="fas fa-laptop-code fa-5x mb-4"></i>
+            </div>
+            <a href="#" class="btn btn-light btn-lg animate__animated animate__fadeInUp animate__delay-3s btn-hover">Start Learning Now</a>
+        </div>
+    </header>
+
+    <!-- Course Features -->
+    <section id="features" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5 animate__animated animate__fadeInDown">Course Features</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body text-center">
+                            <i class="fas fa-video fa-3x mb-3 text-primary"></i>
+                            <h5 class="card-title">Video Lessons</h5>
+                            <p class="card-text">High-quality video tutorials to guide you through each concept</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body text-center">
+                            <i class="fas fa-code fa-3x mb-3 text-success"></i>
+                            <h5 class="card-title">Coding Exercises</h5>
+                            <p class="card-text">Practice your skills with hands-on coding challenges</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body text-center">
+                            <i class="fas fa-users fa-3x mb-3 text-info"></i>
+                            <h5 class="card-title">Community Support</h5>
+                            <p class="card-text">Join our community of learners and get help when you need it</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body text-center">
+                            <i class="fas fa-certificate fa-3x mb-3 text-warning"></i>
+                            <h5 class="card-title">Certification</h5>
+                            <p class="card-text">Earn a certificate upon successful completion of the course</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body text-center">
+                            <i class="fas fa-project-diagram fa-3x mb-3 text-danger"></i>
+                            <h5 class="card-title">Real-world Projects</h5>
+                            <p class="card-text">Build portfolio-worthy projects to showcase your skills</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body text-center">
+                            <i class="fas fa-clock fa-3x mb-3 text-secondary"></i>
+                            <h5 class="card-title">Lifetime Access</h5>
+                            <p class="card-text">Get unlimited access to course materials and future updates</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Logo Bar -->
+    <section class="bg-light py-4">
+        <div class="container">
+            <div class="logo-slider">
+                <div class="logo-slider-content">
+                    <img src="/placeholder.svg?height=50&width=100" alt="Company 1">
+                    <img src="/placeholder.svg?height=50&width=100" alt="Company 2">
+                    <img src="/placeholder.svg?height=50&width=100" alt="Company 3">
+                    <img src="/placeholder.svg?height=50&width=100" alt="Company 4">
+                    <img src="/placeholder.svg?height=50&width=100" alt="Company 5">
+                    <img src="/placeholder.svg?height=50&width=100" alt="Company 6">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Course Modules -->
+    <section id="modules" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5 animate__animated animate__fadeInDown">Course Modules</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">HTML Fundamentals</h5>
+                            <p class="card-text">Learn the basics of HTML and structure your web pages</p>
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-check text-success me-2"></i>HTML Tags</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Semantic HTML</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Forms and Inputs</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">CSS Styling</h5>
+                            <p class="card-text">Master CSS to create beautiful and responsive designs</p>
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-check text-success me-2"></i>Selectors and Properties</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Flexbox and Grid</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Responsive Design</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">JavaScript Essentials</h5>
+                            <p class="card-text">Dive into JavaScript and add interactivity to your websites</p>
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-check text-success me-2"></i>Variables and Functions</li>
+                                <li><i class="fas fa-check text-success me-2"></i>DOM Manipulation</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Event Handling</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Responsive Web Design</h5>
+                            <p class="card-text">Create websites that look great on all devices</p>
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-check text-success me-2"></i>Media Queries</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Fluid Layouts</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Mobile-First Approach</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Web Accessibility</h5>
+                            <p class="card-text">Learn to create inclusive websites for all users</p>
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-check text-success me-2"></i>ARIA Attributes</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Keyboard Navigation</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Color Contrast</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Web Performance</h5>
+                            <p class="card-text">Optimize your websites for speed and efficiency</p>
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-check text-success me-2"></i>Asset Optimization</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Caching Strategies</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Lazy Loading</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials" class="py-5 bg-light parallax" style="background-image: url('/placeholder.svg?height=600&width=1200');">
+        <div class="container">
+            <h2 class="text-center mb-5 animate__animated animate__fadeInDown">What Our Students Say</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <p class="card-text">"This course has been a game-changer for my career. I now feel confident in my web development skills!"</p>
+                            <div class="d-flex align-items-center mt-3">
+                                <img src="/placeholder.svg?height=50&width=50" alt="Student 1" class="rounded-circle me-3">
+                                <div>
+                                    <h6 class="mb-0">John Doe</h6>
+                                    <small class="text-muted">Front-end Developer</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <p class="card-text">"The instructors are knowledgeable and the content is up-to-date. I highly recommend this course to anyone starting out in web development."</p>
+                            <div class="d-flex align-items-center mt-3">
+                                <img src="/placeholder.svg?height=50&width=50" alt="Student 2" class="rounded-circle me-3">
+                                <div>
+                                    <h6 class="mb-0">Jane Smith</h6>
+                                    <small class="text-muted">UX Designer</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <p class="card-text">"I love how the course is structured. It's easy to follow and the projects really help reinforce what you learn."</p>
+                            <div class="d-flex align-items-center mt-3">
+                                <img src="/placeholder.svg?height=50&width=50" alt="Student 3" class="rounded-circle me-3">
+                                <div>
+                                    <h6 class="mb-0">Mike Johnson</h6>
+                                    <small class="text-muted">Full-stack Developer</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing -->
+    <section id="pricing" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5 animate__animated animate__fadeInDown">Choose Your Plan</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Basic</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">$9.99/month</h6>
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-check text-success me-2"></i>Access to all course materials</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Community forum access</li>
+                                <li><i class="fas fa-times text-danger me-2"></i>1-on-1 mentoring</li>
+                                <li><i class="fas fa-times text-danger me-2"></i>Job placement assistance</li>
+                            </ul>
+                            <a href="#" class="btn btn-primary mt-3 btn-hover">Choose Plan</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 border-primary">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Pro</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">$19.99/month</h6>
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-check text-success me-2"></i>Access to all course materials</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Community forum access</li>
+                                <li><i class="fas fa-check text-success me-2"></i>1-on-1 mentoring (2 hours/month)</li>
+                                <li><i class="fas fa-times text-danger me-2"></i>Job placement assistance</li>
+                            </ul>
+                            <a href="#" class="btn btn-primary mt-3 btn-hover">Choose Plan</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Enterprise</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">$29.99/month</h6>
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-check text-success me-2"></i>Access to all course materials</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Community forum access</li>
+                                <li><i class="fas fa-check text-success me-2"></i>1-on-1 mentoring (5 hours/month)</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Job placement assistance</li>
+                            </ul>
+                            <a href="#" class="btn btn-primary mt-3 btn-hover">Choose Plan</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="bg-gradient text-white text-center py-5 parallax" style="background-image: url('/placeholder.svg?height=600&width=1200');">
+        <div class="container">
+            <h2 class="mb-4 animate__animated animate__fadeInDown text-shadow">Ready to Start Your Web Development Journey?</h2>
+            <p class="lead mb-4 animate__animated animate__fadeInUp animate__delay-1s text-shadow">Join thousands of students who have transformed their careers with our course</p>
+            <a href="#" class="btn btn-light btn-lg animate__animated animate__fadeInUp animate__delay-2s btn-hover">Enroll Now</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3">
+        <div class="container">
+            <p>&copy; 2023 WebDev LMS. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Add smooth scrolling to all links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Add animation to cards on scroll
+        function animateOnScroll() {
+            const cards = document.querySelectorAll('.card');
+            cards.forEach(card => {
+                const cardTop = card.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+                if (cardTop < windowHeight - 100) {
+                    card.classList.add('animate');
+                }
+            });
+        }
+
+        // Animate elements on scroll
+        function animateElements() {
+            const elements = document.querySelectorAll('.animate__animated');
+            elements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+                if (elementTop < windowHeight - 100) {
+                    element.style.visibility = 'visible';
+                    element.classList.add('animate__fadeInUp');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', () => {
+            animateOnScroll();
+            animateElements();
+        });
+        window.addEventListener('load', () => {
+            animateOnScroll();
+            animateElements();
+        });
+
+        // Parallax effect
+        window.addEventListener('scroll', () => {
+            const parallaxElements = document.querySelectorAll('.parallax');
+            parallaxElements.forEach(element => {
+                const scrollPosition = window.pageYOffset;
+                element.style.backgroundPositionY = `${scrollPosition * 0.5}px`;
+            });
+        });
+    </script>
+</body>
+</html>

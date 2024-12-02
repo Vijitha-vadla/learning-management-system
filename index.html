@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LMS Navigation</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="index.css">
+    
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <!-- Logo -->
+            <a class="navbar-brand" href="#">
+                <i class="fas fa-graduation-cap me-2"></i>EduLearn
+            </a>
+
+            <!-- Toggle Button -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" 
+                    aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Navbar Content -->
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <!-- Search Box -->
+                <div class="search-box ms-auto">
+                    <input type="text" class="search-input" placeholder="Search courses...">
+                    <i class="fas fa-search search-icon"></i>
+                </div>
+
+                <!-- Navigation Links -->
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+
+                    <!-- Categories Dropdown -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="Categories.html">Categories</a>
+                    </li>
+                    <!-- <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" 
+                           data-bs-toggle="dropdown" aria-expanded="false">
+                            Categories
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Programming</a></li>
+                            <li><a class="dropdown-item" href="#">Design</a></li>
+                            <li><a class="dropdown-item" href="#">Business</a></li>
+                            <li><a class="dropdown-item" href="#">Marketing</a></li>
+                            <li><a class="dropdown-item" href="#">Language</a></li>
+                        </ul>
+                    </li> -->
+
+                    <!-- Services Dropdown -->
+                    <!-- <li class="nav-item dropdown"> -->
+                        <!-- <a class="nav-link dropdown-toggle" href="#" role="button" 
+                           data-bs-toggle="dropdown" aria-expanded="false"> -->
+                           <li class="nav-item">
+                            <a class="nav-link" href="services.html">Services</a>
+                        </li>
+                        <!-- <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Online Courses</a></li>
+                            <li><a class="dropdown-item" href="#">Live Sessions</a></li>
+                            <li><a class="dropdown-item" href="#">One-on-One Mentoring</a></li>
+                            <li><a class="dropdown-item" href="#">Career Guidance</a></li>
+                        </ul> -->
+                    <!-- </li> -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About us</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link contact-btn" href="contacts.html">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- navbar completed -->
+
+    <div class="navbar-spacer"></div>
+
+   <!-- slide bar -->
+
+   <div id="lmsCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#lmsCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#lmsCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#lmsCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="assests/LMS-Bannar.png" class="d-block w-100" alt="LMS Feature 1">
+            <div class="carousel-caption">
+                <h5>Interactive Learning Experience</h5>
+                <p>Engage with dynamic course content and real-time assessments.</p>
+                <button class="btn btn-lms">Explore Courses</button>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="assests/lms banner 0.webp" class="d-block w-100" alt="LMS Feature 2">
+            <div class="carousel-caption">
+                <h5>Comprehensive Progress Tracking</h5>
+                <p>Monitor your learning journey with detailed analytics and insights.</p>
+                <button class="btn btn-lms">View Dashboard</button>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="assests/lms banner 2.jpeg" class="d-block w-100" alt="LMS Feature 3">
+            <div class="carousel-caption">
+                <h5>Seamless Mobile Learning</h5>
+                <p>Access your courses anytime, anywhere on any device.</p>
+                <button class="btn btn-lms">Get Started</button>
+            </div>
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#lmsCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#lmsCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+<!-- slide bar end -->
+
+                                                         <!-- cards bar -->
+
+        <div class="container py-5">
+            <h1 class="text-center mb-0">Featured Courses</h1>
+            <div class="row" id="course-list"></div>
+        </div>
+       
+        <!-- Cart Modal -->
+        <div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="cartModalLabel">Your Cart</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body" id="cart-items">
+                        <!-- Cart items will be inserted here -->
+                    </div>
+                    <div class="modal-footer">
+                        <p class="me-auto">Total: ₹<span id="cart-total">0</span></p>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary" id="checkout-button">Checkout</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    
+        <!-- Checkout Modal -->
+        <div class="modal fade" id="checkoutModal" tabindex="-1" aria-labelledby="checkoutModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="checkoutModalLabel">Checkout</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="checkout-form">
+                            <div class="mb-3">
+                                <label for="name" class="form-label">Full Name</label>
+                                <input type="text" class="form-control" id="name" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="phone" class="form-label">Phone Number</label>
+                                <input type="tel" class="form-control" id="phone" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="card-number" class="form-label">Card Number</label>
+                                <input type="text" class="form-control" id="card-number" required>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="expiry" class="form-label">Expiry Date</label>
+                                    <input type="text" class="form-control" id="expiry" placeholder="MM/YY" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="cvv" class="form-label">CVV</label>
+                                    <input type="text" class="form-control" id="cvv" required>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary" id="place-order-button">Place Order</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+          <!-- card bar -->
+    <div class="container py-4">
+        <h1 class="display-5 fw-bold mb-4">Learning Resources Archive</h1>
+        
+        <div class="row g-4" id="cardContainer">
+            <!-- Cards will be inserted here by JavaScript -->
+        </div>
+    </div>
+
+    <!-- logos bars -->
+
+    <section class="logo-showcase">
+        <div class="container">
+            <h2 class="heading">Trusted by Leading Companies Worldwide</h2>
+        </div>
+        <div class="scroll-container">
+            <div class="logo-track">
+                <!-- First set of logos -->
+                <div class="logo-item">
+                    <img src="assests/logo1.jpg" alt="Company Logo 1">
+                </div>
+                <div class="logo-item">
+                    <img src="assests/logo2.jpg" alt="Company Logo 2">
+                </div>
+                <div class="logo-item">
+                    <img src="assests/logo3.jpg" alt="Company Logo 3">
+                </div>
+                <div class="logo-item">
+                    <img src="assests/logo1.jpg" alt="Company Logo 4">
+                </div>
+                <div class="logo-item">
+                    <img src="assests/logo5.jpg" alt="Company Logo 5">
+                </div>
+                <div class="logo-item">
+                    <img src="assests/logo6.jpg" alt="Company Logo 6">
+                </div>
+                <!-- Duplicate set for seamless scrolling -->
+                <div class="logo-item">
+                    <img src="assests/logo5.jpg" alt="Company Logo 1">
+                </div>
+                <div class="logo-item">
+                    <img src="assests/logo2.jpg" alt="Company Logo 2">
+                </div>
+                <div class="logo-item">
+                    <img src="assests/logo1.jpg" alt="Company Logo 3">
+                </div>
+                <div class="logo-item">
+                    <img src="assests/logo3.jpg" alt="Company Logo 4">
+                </div>
+                <div class="logo-item">
+                    <img src="assests/logo6.jpg" alt="Company Logo 5">
+                </div>
+                <div class="logo-item">
+                    <img src="assests/logo2.jpg" alt="Company Logo 6">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- logos bars end -->
+
+    <!-- card and matter -->
+
+   <div class="container-fluid">
+    <div class="container-custom">
+        <div class="row">
+            <!-- Text Content Section -->
+            <div class="col-md-6 text-content">
+                <h2>Drive learning outcomes with reporting and insights</h2>
+                <p>
+                    Our built-in user adoption funnel is intuitive, actionable, and ideal for small teams.
+                    Understand and take action on overall user adoption, and see which courses individual users are learning from.
+                </p>
+                <button class="btn btn-custom" onclick="showAlert()">Learn More</button>
+            </div>
+
+            <!-- Image Content Section -->
+            <div class="col-md-6 image-content">
+                <img src="assests/card matter1.jpg" alt="User adoption funnel screenshot">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid">
+    <div class="container-custom">
+        <div class="row">
+            <!-- Image Content Section -->
+            <div class="col-md-6 image-content">
+                <img src="assests/card matter2.jpg" alt="User adoption funnel screenshot">
+            </div>
+             <!-- Text Content Section -->
+             <div class="col-md-6 text-content">
+                <h2>Drive learning outcomes with reporting and insights</h2>
+                <p>
+                    Our built-in user adoption funnel is intuitive, actionable, and ideal for small teams.
+                    Understand and take action on overall user adoption, and see which courses individual users are learning from.
+                </p>
+                <button class="btn btn-custom" onclick="showAlert()">Learn More</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Custom Alert -->
+<div id="customAlert" class="alert-custom">
+    Explore detailed insights on user adoption and course engagement!
+</div>
+
+<!-- footer page -->
+<main>
+    <!-- Main content would go here -->
+</main>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer-top">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                    <h5 class="footer-heading">About LearnSmart</h5>
+                    <p>LearnSmart is a cutting-edge Learning Management System designed to empower learners and educators worldwide. Our platform offers a diverse range of courses and tools to enhance your learning experience.</p>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                    <h5 class="footer-heading">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="footer-link">Home</a></li>
+                        <li><a href="#" class="footer-link">Courses</a></li>
+                        <li><a href="#" class="footer-link">Instructors</a></li>
+                        <li><a href="#" class="footer-link">Student Dashboard</a></li>
+                        <li><a href="#" class="footer-link">Help Center</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                    <h5 class="footer-heading">Popular Courses</h5>
+                    <div>
+                        <a href="#" class="course-pill">Web Development</a>
+                        <a href="#" class="course-pill">Data Science</a>
+                        <a href="#" class="course-pill">Machine Learning</a>
+                        <a href="#" class="course-pill">Digital Marketing</a>
+                        <a href="#" class="course-pill">Graphic Design</a>
+                        <a href="#" class="course-pill">Business Analytics</a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                    <h5 class="footer-heading">Stay Connected</h5>
+                    <p>Subscribe to our newsletter for updates and special offers.</p>
+                    <form id="newsletter-form" class="mb-3">
+                        <div class="input-group">
+                            <input type="email" class="form-control newsletter-input" placeholder="Your email" aria-label="Your email" required>
+                            <button class="btn btn-subscribe" type="submit">Subscribe</button>
+                        </div>
+                    </form>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="social-icon" aria-label="Twitter"><i class="bi bi-twitter"></i></a>
+                        <a href="#" class="social-icon" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                        <a href="#" class="social-icon" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="social-icon" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom text-center">
+            <div class="row">
+                <div class="col-md-6 text-md-start">
+                    <p>&copy; 2023 LearnSmart LMS. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="#" class="footer-bottom-link me-3">Privacy Policy</a>
+                    <a href="#" class="footer-bottom-link me-3">Terms of Service</a>
+                    <a href="#" class="footer-bottom-link">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    
+        
+
+                                                                   <!-- Bootstrap JS and Popper.js -->
+     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+    
+    <script src="index.js"></script>
+  
+    <!-- <script>
+        // Add animation to dropdown menus
+        document.querySelectorAll('.dropdown').forEach(dropdown => {
+            dropdown.addEventListener('show.bs.dropdown', function() {
+                const dropdownMenu = this.querySelector('.dropdown-menu');
+                dropdownMenu.style.opacity = '0';
+                setTimeout(() => {
+                    dropdownMenu.style.transition = 'all 0.3s ease';
+                    dropdownMenu.style.opacity = '1';
+                }, 0);
+            });
+        });
+
+        // Search functionality
+        const searchInput = document.querySelector('.search-input');
+        searchInput.addEventListener('keyup', function(e) {
+            if (e.key === 'Enter') {
+                // Add your search logic here
+                console.log('Searching for:', this.value);
+            }
+        });
+    </script> -->
+
+    <script>
+        // const cards = [
+        //     { 
+        //         id: 1, 
+        //         title: 'Introduction to React', 
+        //         type: 'Course', 
+        //         icon: 'fa-book', 
+        //         style: 'default' 
+        //     },
+        //     { 
+        //         id: 2, 
+        //         title: 'JavaScript Basics', 
+        //         type: 'Video', 
+        //         icon: 'fa-video', 
+        //         style: 'outline' 
+        //     },
+        //     { 
+        //         id: 3, 
+        //         title: 'CSS Flexbox Guide', 
+        //         type: 'Article', 
+        //         icon: 'fa-file-lines', 
+        //         style: 'gradient' 
+        //     },
+        //     { 
+        //         id: 4, 
+        //         title: 'Web Development Group', 
+        //         type: 'Forum', 
+        //         icon: 'fa-users', 
+        //         style: 'hover' 
+        //     }
+        // ];
+
+        // function getCardStyle(style) {
+        //     switch (style) {
+        //         case 'outline':
+        //             return 'card-outline';
+        //         case 'gradient':
+        //             return 'card-gradient';
+        //         case 'hover':
+        //             return 'card-hover';
+        //         default:
+        //             return '';
+        //     }
+        // }
+
+        // function createCards() {
+        //     const container = document.getElementById('cardContainer');
+            
+        //     cards.forEach(card => {
+        //         const cardHTML = `
+        //             <div class="col-12 col-md-6 col-lg-3">
+        //                 <div class="card h-100 ${getCardStyle(card.style)}">
+        //                     <div class="card-header">
+        //                         <div class="d-flex justify-content-between align-items-center">
+        //                             <i class="fas ${card.icon} fa-lg"></i>
+        //                             <span class="badge bg-secondary">${card.type}</span>
+        //                         </div>
+        //                         <h5 class="card-title mt-3">${card.title}</h5>
+        //                     </div>
+        //                     <div class="card-body">
+        //                         <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        //                     </div>
+        //                     <div class="card-footer bg-transparent border-0">
+        //                         <button class="btn btn-primary w-100 btn-arrow">
+        //                             View Resource
+        //                             <i class="fas fa-arrow-right"></i>
+        //                         </button>
+        //                     </div>
+        //                 </div>
+        //             </div>
+        //         `;
+        //         container.innerHTML += cardHTML;
+        //     });
+        // }
+
+        // // Initialize cards when the page loads
+        // document.addEventListener('DOMContentLoaded', createCards);
+    </script>
+</body>
+</html>

@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Science LMS</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <style>
+        :root {
+            --primary-color: #4a90e2;
+            --secondary-color: #50c878;
+            --accent-color: #ff6b6b;
+            --dark-color: #2c3e50;
+            --light-color: #ecf0f1;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            color: var(--dark-color);
+        }
+
+        .bg-primary-custom {
+            background-color: var(--primary-color);
+        }
+
+        .bg-secondary-custom {
+            background-color: var(--secondary-color);
+        }
+
+        .bg-accent-custom {
+            background-color: var(--accent-color);
+        }
+
+        .text-primary-custom {
+            color: var(--primary-color);
+        }
+
+        .text-secondary-custom {
+            color: var(--secondary-color);
+        }
+
+        .text-accent-custom {
+            color: var(--accent-color);
+        }
+
+        .btn-primary-custom {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+            color: white;
+        }
+
+        .btn-primary-custom:hover {
+            background-color: #3a7bc8;
+            border-color: #3a7bc8;
+        }
+
+        .btn-secondary-custom {
+            background-color: var(--secondary-color);
+            border-color: var(--secondary-color);
+            color: white;
+        }
+
+        .btn-secondary-custom:hover {
+            background-color: #45b06a;
+            border-color: #45b06a;
+        }
+
+        .card {
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            margin-bottom: 20px;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .parallax {
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .text-shadow {
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        @media (max-width: 768px) {
+            .card {
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <header class="bg-primary-custom text-white text-center py-5 parallax" style="background-image: url('/placeholder.svg?height=600&width=1200');">
+        <div class="container">
+            <h1 class="display-4 mb-3 animate__animated animate__fadeInDown text-shadow">Master Data Science</h1>
+            <p class="lead mb-4 animate__animated animate__fadeInUp animate__delay-1s text-shadow">Learn Python, Machine Learning, Data Analysis, and more with our comprehensive courses</p>
+            <a href="#courses" class="btn btn-light btn-lg animate__animated animate__fadeInUp animate__delay-2s">Explore Courses</a>
+        </div>
+    </header>
+
+    <!-- Features Section -->
+    <section id="features" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5 animate__animated animate__fadeInDown">Why Choose Our Data Science Courses?</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 bg-secondary-custom text-white">
+                        <div class="card-body text-center">
+                            <i class="fas fa-laptop-code fa-3x mb-3"></i>
+                            <h5 class="card-title">Hands-on Projects</h5>
+                            <p class="card-text">Apply your skills to real-world data science projects</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 bg-accent-custom text-white">
+                        <div class="card-body text-center">
+                            <i class="fas fa-users fa-3x mb-3"></i>
+                            <h5 class="card-title">Expert Instructors</h5>
+                            <p class="card-text">Learn from industry professionals with years of experience</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 bg-primary-custom text-white">
+                        <div class="card-body text-center">
+                            <i class="fas fa-certificate fa-3x mb-3"></i>
+                            <h5 class="card-title">Certification</h5>
+                            <p class="card-text">Earn certificates to showcase your data science skills</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Courses Section -->
+    <section id="courses" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5 animate__animated animate__fadeInDown">Our Data Science Courses</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Python for Data Science</h5>
+                            <p class="card-text">Master Python programming for data analysis and manipulation</p>
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-check text-success me-2"></i>Python Basics</li>
+                                <li><i class="fas fa-check text-success me-2"></i>NumPy and Pandas</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Data Visualization</li>
+                            </ul>
+                            <div class="mt-3">
+                                <button class="btn btn-primary-custom me-2" onclick="showCourseDetails('python')">View Details</button>
+                                <button class="btn btn-secondary-custom" onclick="showEnrollmentForm('python')">Enroll Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Machine Learning Fundamentals</h5>
+                            <p class="card-text">Learn the core concepts and algorithms of machine learning</p>
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-check text-success me-2"></i>Supervised Learning</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Unsupervised Learning</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Model Evaluation</li>
+                            </ul>
+                            <div class="mt-3">
+                                <button class="btn btn-primary-custom me-2" onclick="showCourseDetails('machine-learning')">View Details</button>
+                                <button class="btn btn-secondary-custom" onclick="showEnrollmentForm('machine-learning')">Enroll Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Data Analysis and Visualization</h5>
+                            <p class="card-text">Master the art of exploring and presenting data insights</p>
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-check text-success me-2"></i>Exploratory Data Analysis</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Statistical Analysis</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Data Storytelling</li>
+                            </ul>
+                            <div class="mt-3">
+                                <button class="btn btn-primary-custom me-2" onclick="showCourseDetails('data-analysis')">View Details</button>
+                                <button class="btn btn-secondary-custom" onclick="showEnrollmentForm('data-analysis')">Enroll Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Deep Learning and Neural Networks</h5>
+                            <p class="card-text">Explore advanced machine learning techniques with neural networks</p>
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-check text-success me-2"></i>Neural Network Architectures</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Convolutional Neural Networks</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Recurrent Neural Networks</li>
+                            </ul>
+                            <div class="mt-3">
+                                <button class="btn btn-primary-custom me-2" onclick="showCourseDetails('deep-learning')">View Details</button>
+                                <button class="btn btn-secondary-custom" onclick="showEnrollmentForm('deep-learning')">Enroll Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Big Data Analytics</h5>
+                            <p class="card-text">Learn to process and analyze large-scale datasets</p>
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-check text-success me-2"></i>Hadoop Ecosystem</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Apache Spark</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Distributed Computing</li>
+                            </ul>
+                            <div class="mt-3">
+                                <button class="btn btn-primary-custom me-2" onclick="showCourseDetails('big-data')">View Details</button>
+                                <button class="btn btn-secondary-custom" onclick="showEnrollmentForm('big-data')">Enroll Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Data Science Capstone Project</h5>
+                            <p class="card-text">Apply your skills to a real-world data science problem</p>
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-check text-success me-2"></i>Project Planning</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Data Collection and Analysis</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Model Development and Deployment</li>
+                            </ul>
+                            <div class="mt-3">
+                                <button class="btn btn-primary-custom me-2" onclick="showCourseDetails('capstone')">View Details</button>
+                                <button class="btn btn-secondary-custom" onclick="showEnrollmentForm('capstone')">Enroll Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials" class="py-5 bg-light parallax" style="background-image: url('/placeholder.svg?height=600&width=1200');">
+        <div class="container">
+            <h2 class="text-center mb-5 animate__animated animate__fadeInDown">What Our Students Say</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <p class="card-text">"The data science courses here are comprehensive and practical. I've gained valuable skills that I use daily in my job as a data analyst."</p>
+                            <div class="d-flex align-items-center mt-3">
+                                <img src="/placeholder.svg?height=50&width=50" alt="Student 1" class="rounded-circle me-3">
+                                <div>
+                                    <h6 class="mb-0">Emily Chen</h6>
+                                    <small class="text-muted">Data Analyst</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <p class="card-text">"The machine learning course was challenging but incredibly rewarding. The instructors are knowledgeable and supportive throughout the learning process."</p>
+                            <div class="d-flex align-items-center mt-3">
+                                <img src="/placeholder.svg?height=50&width=50" alt="Student 2" class="rounded-circle me-3">
+                                <div>
+                                    <h6 class="mb-0">Michael Johnson</h6>
+                                    <small class="text-muted">Machine Learning Engineer</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <p class="card-text">"The capstone project was an excellent opportunity to apply everything I learned. It helped me build a strong portfolio and land my dream job in data science."</p>
+                            <div class="d-flex align-items-center mt-3">
+                                <img src="/placeholder.svg?height=50&width=50" alt="Student 3" class="rounded-circle me-3">
+                                <div>
+                                    <h6 class="mb-0">Sarah Thompson</h6>
+                                    <small class="text-muted">Data Scientist</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="bg-primary-custom text-white text-center py-5">
+        <div class="container">
+            <h2 class="mb-4 animate__animated animate__fadeInDown text-shadow">Ready to Start Your Data Science Journey?</h2>
+            <p class="lead mb-4 animate__animated animate__fadeInUp animate__delay-1s text-shadow">Join thousands of students who have transformed their careers with our courses</p>
+            <a href="#courses" class="btn btn-light btn-lg animate__animated animate__fadeInUp animate__delay-2s">Explore Courses</a>
+        </div>
+    </section>
+
+    <!-- Course Details Modal -->
+    <div class="modal fade" id="courseDetailsModal" tabindex="-1" aria-labelledby="courseDetailsModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header bg-primary-custom text-white">
+                    <h5 class="modal-title" id="courseDetailsModalLabel">Course Details</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="courseDetailsContent">
+                    <!-- Course details will be dynamically inserted here -->
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary-custom" onclick="showEnrollmentForm(currentCourse)">Enroll Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Enrollment Form Modal -->
+    <div class="modal fade" id="enrollmentModal" tabindex="-1" aria-labelledby="enrollmentModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header bg-secondary-custom text-white">
+                    <h5 class="modal-title" id="enrollmentModalLabel">Enroll in Course</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="enrollmentForm">
+                        <div class="mb-3">
+                            <label for="fullName" class="form-label">Full Name</label>
+                            <input type="text" class="form-control" id="fullName" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="phone" class="form-label">Phone Number</label>
+                            <input type="tel" class="form-control" id="phone" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="courseSelect" class="form-label">Selected Course</label>
+                            <input type="text" class="form-control" id="courseSelect" readonly>
+                        </div>
+                        <div class="mb-3">
+                            <label for="experience" class="form-label">Prior Experience</label>
+                            <select class="form-select" id="experience" required>
+                                <option value="">Select your experience level</option>
+                                <option value="beginner">Beginner</option>
+                                <option value="intermediate">Intermediate</option>
+                                <option value="advanced">Advanced</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="goals" class="form-label">Learning Goals</label>
+                            <textarea class="form-control" id="goals" rows="3" required></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary-custom" onclick="submitEnrollment()">Submit Enrollment</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Enrollment Confirmation Modal -->
+    <div class="modal fade" id="enrollmentConfirmationModal" tabindex="-1" aria-labelledby="enrollmentConfirmationModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header bg-success text-white">
+                    <h5 class="modal-title" id="enrollmentConfirmationModalLabel">Enrollment Confirmation</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Congratulations! You have successfully enrolled in the course. We'll send you an email with further instructions to get started.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Add smooth scrolling to all links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Animate elements on scroll
+        function animateElements() {
+            const elements = document.querySelectorAll('.animate__animated');
+            elements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+                if (elementTop < windowHeight - 100) {
+                    element.style.visibility = 'visible';
+                    element.classList.add('animate__fadeInUp');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', animateElements);
+        window.addEventListener('load', animateElements);
+
+        // Parallax effect
+        window.addEventListener('scroll', () => {
+            const parallaxElements = document.querySelectorAll('.parallax');
+            parallaxElements.forEach(element => {
+                const scrollPosition = window.pageYOffset;
+                element.style.backgroundPositionY = `${scrollPosition * 0.5}px`;
+            });
+        });
+
+        // Course details and enrollment
+        let currentCourse = '';
+        const courseDetails = {
+            'python': {
+                title: 'Python for Data Science',
+                description: 'Master Python programming for data analysis and manipulation. This course covers essential Python libraries and techniques used in data science.',
+                topics: [
+                    'Python basics and data structures',
+                    'NumPy for numerical computing',
+                    'Pandas for data manipulation',
+                    'Data visualization with Matplotlib and Seaborn',
+                    'Jupyter Notebooks for interactive development',
+                    'Best practices in data science coding'
+                ],
+                duration: '6 weeks',
+                level: 'Beginner to Intermediate'
+            },
+            'machine-learning': {
+                title: 'Machine Learning Fundamentals',
+                description: 'Learn the core concepts and algorithms of machine learning. This course provides a solid foundation in both theory and practical application of machine learning techniques.',
+                topics: [
+                    'Supervised learning algorithms',
+                    'Unsupervised learning techniques',
+                    'Model evaluation and validation',
+                    'Feature engineering and selection',
+                    'Ensemble methods',
+                    'Introduction to deep learning'
+                ],
+                duration: '8 weeks',
+                level: 'Intermediate'
+            },
+            'data-analysis': {
+                title: 'Data Analysis and Visualization',
+                description: 'Master the art of exploring and presenting data insights. This course focuses on techniques for effective data analysis and creating compelling visualizations.',
+                topics: [
+                    'Exploratory Data Analysis (EDA)',
+                    'Statistical analysis and hypothesis testing',
+                    'Data cleaning and preprocessing',
+                    'Advanced data visualization techniques',
+                    'Storytelling with data',
+                    'Dashboard creation with Tableau'
+                ],
+                duration: '6 weeks',
+                level: 'Intermediate'
+            },
+            'deep-learning': {
+                title: 'Deep Learning and Neural Networks',
+                description: 'Explore advanced machine learning techniques with neural networks. This course covers the theory and application of deep learning models.',
+                topics: [
+                    'Neural network architectures',
+                    'Convolutional Neural Networks (CNNs)',
+                    'Recurrent Neural Networks (RNNs)',
+                    'Transfer learning and fine-tuning',
+                    'Generative models (GANs, VAEs)',
+                    'Deep learning project deployment'
+                ],
+                duration: '8 weeks',
+                level: 'Advanced'
+            },
+            'big-data': {
+                title: 'Big Data Analytics',
+                description: 'Learn to process and analyze large-scale datasets using distributed computing frameworks. This course covers big data technologies and their applications.',
+                topics: [
+                    'Hadoop ecosystem overview',
+                    'Apache Spark for distributed computing',
+                    'Data processing with Spark SQL and DataFrames',
+                    'Machine learning with Spark MLlib',
+                    'Stream processing with Spark Streaming',
+                    'Big data architecture and best practices'
+                ],
+                duration: '7 weeks',
+                level: 'Intermediate to Advanced'
+            },
+            'capstone': {
+                title: 'Data Science Capstone Project',
+                description: 'Apply your skills to a real-world data science problem. This project-based course allows you to demonstrate your expertise in a comprehensive data science project.',
+                topics: [
+                    'Project planning and scoping',
+                    'Data collection and preprocessing',
+                    'Exploratory data analysis',
+                    'Model development and evaluation',
+                    'Results interpretation and presentation',
+                    'Project deployment and documentation'
+                ],
+                duration: '10 weeks',
+                level: 'Advanced'
+            }
+        };
+
+        function showCourseDetails(courseId) {
+            currentCourse = courseId;
+            const course = courseDetails[courseId];
+            const modalTitle = document.getElementById('courseDetailsModalLabel');
+            const modalContent = document.getElementById('courseDetailsContent');
+
+            modalTitle.textContent = course.title;
+            modalContent.innerHTML = `
+                <p>${course.description}</p>
+                <h6>Key Topics:</h6>
+                <ul>
+                    ${course.topics.map(topic => `<li>${topic}</li>`).join('')}
+                </ul>
+                <p><strong>Duration:</strong> ${course.duration}</p>
+                <p><strong>Level:</strong> ${course.level}</p>
+            `;
+
+            const modal = new bootstrap.Modal(document.getElementById('courseDetailsModal'));
+            modal.show();
+        }
+
+        function showEnrollmentForm(courseId) {
+            currentCourse = courseId;
+            const course = courseDetails[courseId];
+            document.getElementById('courseSelect').value = course.title;
+            
+            const courseDetailsModal = bootstrap.Modal.getInstance(document.getElementById('courseDetailsModal'));
+            if (courseDetailsModal) {
+                courseDetailsModal.hide();
+            }
+
+            const enrollmentModal = new bootstrap.Modal(document.getElementById('enrollmentModal'));
+            enrollmentModal.show();
+        }
+
+        function submitEnrollment() {
+            const form = document.getElementById('enrollmentForm');
+            if (form.checkValidity()) {
+                const enrollmentModal = bootstrap.Modal.getInstance(document.getElementById('enrollmentModal'));
+                enrollmentModal.hide();
+
+                const confirmationModal = new bootstrap.Modal(document.getElementById('enrollmentConfirmationModal'));
+                confirmationModal.show();
+
+                // Reset the form
+                form.reset();
+            } else {
+                form.reportValidity();
+            }
+        }
+    </script>
+</body>
+</html>

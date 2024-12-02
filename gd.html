@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graphic Design LMS</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <style>
+        :root {
+            --primary-color: #ff6b6b;
+            --secondary-color: #4ecdc4;
+            --accent-color: #45b7d1;
+            --dark-color: #2c3e50;
+            --light-color: #ecf0f1;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            color: var(--dark-color);
+        }
+
+        .bg-primary-custom {
+            background-color: var(--primary-color);
+        }
+
+        .bg-secondary-custom {
+            background-color: var(--secondary-color);
+        }
+
+        .bg-accent-custom {
+            background-color: var(--accent-color);
+        }
+
+        .text-primary-custom {
+            color: var(--primary-color);
+        }
+
+        .text-secondary-custom {
+            color: var(--secondary-color);
+        }
+
+        .text-accent-custom {
+            color: var(--accent-color);
+        }
+
+        .btn-primary-custom {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+            color: white;
+        }
+
+        .btn-primary-custom:hover {
+            background-color: #ff5252;
+            border-color: #ff5252;
+        }
+
+        .btn-secondary-custom {
+            background-color: var(--secondary-color);
+            border-color: var(--secondary-color);
+            color: white;
+        }
+
+        .btn-secondary-custom:hover {
+            background-color: #45b7a0;
+            border-color: #45b7a0;
+        }
+
+        .card {
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            margin-bottom: 20px;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .parallax {
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .text-shadow {
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        @media (max-width: 768px) {
+            .card {
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <header class="bg-primary-custom text-white text-center py-5 parallax" style="background-image: url('/placeholder.svg?height=600&width=1200');">
+        <div class="container">
+            <h1 class="display-4 mb-3 animate_animated animate_fadeInDown text-shadow">Master Graphic Design</h1>
+            <p class="lead mb-4 animate_animated animatefadeInUp animate_delay-1s text-shadow">Learn Typography, Color Theory, Layout Design, and more with our comprehensive courses</p>
+            <a href="#courses" class="btn btn-light btn-lg animate_animated animatefadeInUp animate_delay-2s">Explore Courses</a>
+        </div>
+    </header>
+
+    <!-- Features Section -->
+    <section id="features" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5 animate_animated animate_fadeInDown">Why Choose Our Graphic Design Courses?</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 bg-secondary-custom text-white">
+                        <div class="card-body text-center">
+                            <i class="fas fa-pencil-ruler fa-3x mb-3"></i>
+                            <h5 class="card-title">Hands-on Projects</h5>
+                            <p class="card-text">Apply your skills to real-world graphic design projects</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 bg-accent-custom text-white">
+                        <div class="card-body text-center">
+                            <i class="fas fa-users fa-3x mb-3"></i>
+                            <h5 class="card-title">Industry Experts</h5>
+                            <p class="card-text">Learn from experienced graphic design professionals</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 bg-primary-custom text-white">
+                        <div class="card-body text-center">
+                            <i class="fas fa-certificate fa-3x mb-3"></i>
+                            <h5 class="card-title">Certification</h5>
+                            <p class="card-text">Earn certificates to showcase your graphic design skills</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Courses Section -->
+    <section id="courses" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5 animate_animated animate_fadeInDown">Our Graphic Design Courses</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Typography Fundamentals</h5>
+                            <p class="card-text">Master the art of typography and text design</p>
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-check text-success me-2"></i>Font selection</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Kerning and leading</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Typographic hierarchy</li>
+                            </ul>
+                            <div class="mt-3">
+                                <button class="btn btn-primary-custom me-2" onclick="showCourseDetails('typography')">View Details</button>
+                                <button class="btn btn-secondary-custom" onclick="showEnrollmentForm('typography')">Enroll Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Color Theory and Application</h5>
+                            <p class="card-text">Learn to use color effectively in design</p>
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-check text-success me-2"></i>Color psychology</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Color schemes</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Color in branding</li>
+                            </ul>
+                            <div class="mt-3">
+                                <button class="btn btn-primary-custom me-2" onclick="showCourseDetails('color-theory')">View Details</button>
+                                <button class="btn btn-secondary-custom" onclick="showEnrollmentForm('color-theory')">Enroll Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Layout Design</h5>
+                            <p class="card-text">Create effective layouts for print and digital media</p>
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-check text-success me-2"></i>Grid systems</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Composition techniques</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Responsive design</li>
+                            </ul>
+                            <div class="mt-3">
+                                <button class="btn btn-primary-custom me-2" onclick="showCourseDetails('layout-design')">View Details</button>
+                                <button class="btn btn-secondary-custom" onclick="showEnrollmentForm('layout-design')">Enroll Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Logo Design</h5>
+                            <p class="card-text">Create memorable and effective logos</p>
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-check text-success me-2"></i>Logo concepts</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Vector graphics</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Brand identity</li>
+                            </ul>
+                            <div class="mt-3">
+                                <button class="btn btn-primary-custom me-2" onclick="showCourseDetails('logo-design')">View Details</button>
+                                <button class="btn btn-secondary-custom" onclick="showEnrollmentForm('logo-design')">Enroll Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Digital Illustration</h5>
+                            <p class="card-text">Master digital illustration techniques</p>
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-check text-success me-2"></i>Digital drawing</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Texture creation</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Character design</li>
+                            </ul>
+                            <div class="mt-3">
+                                <button class="btn btn-primary-custom me-2" onclick="showCourseDetails('digital-illustration')">View Details</button>
+                                <button class="btn btn-secondary-custom" onclick="showEnrollmentForm('digital-illustration')">Enroll Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Print Production</h5>
+                            <p class="card-text">Learn the essentials of print design and production</p>
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-check text-success me-2"></i>File preparation</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Color management</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Print techniques</li>
+                            </ul>
+                            <div class="mt-3">
+                                <button class="btn btn-primary-custom me-2" onclick="showCourseDetails('print-production')">View Details</button>
+                                <button class="btn btn-secondary-custom" onclick="showEnrollmentForm('print-production')">Enroll Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials" class="py-5 bg-light parallax" style="background-image: url('/placeholder.svg?height=600&width=1200');">
+        <div class="container">
+            <h2 class="text-center mb-5 animate_animated animate_fadeInDown">What Our Students Say</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <p class="card-text">"The typography course transformed my design skills. I now have a deep understanding of how to use fonts effectively in my projects."</p>
+                            <div class="d-flex align-items-center mt-3">
+                                <img src="/placeholder.svg?height=50&width=50" alt="Student 1" class="rounded-circle me-3">
+                                <div>
+                                    <h6 class="mb-0">Emily Chen</h6>
+                                    <small class="text-muted">Freelance Designer</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <p class="card-text">"The logo design course gave me the skills to create professional logos. My clients are thrilled with the results!"</p>
+                            <div class="d-flex align-items-center mt-3">
+                                <img src="/placeholder.svg?height=50&width=50" alt="Student 2" class="rounded-circle me-3">
+                                <div>
+                                    <h6 class="mb-0">Mark Johnson</h6>
+                                    <small class="text-muted">Brand Identity Designer</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <p class="card-text">"The print production course was invaluable. I now confidently handle print projects from design to final production."</p>
+                            <div class="d-flex align-items-center mt-3">
+                                <img src="/placeholder.svg?height=50&width=50" alt="Student 3" class="rounded-circle me-3">
+                                <div>
+                                    <h6 class="mb-0">Sarah Lee</h6>
+                                    <small class="text-muted">Print Shop Owner</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="bg-primary-custom text-white text-center py-5">
+        <div class="container">
+            <h2 class="mb-4 animate_animated animate_fadeInDown text-shadow">Ready to Start Your Graphic Design Journey?</h2>
+            <p class="lead mb-4 animate_animated animatefadeInUp animate_delay-1s text-shadow">Join thousands of students who have transformed their careers with our courses</p>
+            <a href="#courses" class="btn btn-light btn-lg animate_animated animatefadeInUp animate_delay-2s">Explore Courses</a>
+        </div>
+    </section>
+
+    <!-- Course Details Modal -->
+    <div class="modal fade" id="courseDetailsModal" tabindex="-1" aria-labelledby="courseDetailsModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header bg-primary-custom text-white">
+                    <h5 class="modal-title" id="courseDetailsModalLabel">Course Details</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="courseDetailsContent">
+                    <!-- Course details will be dynamically inserted here -->
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary-custom" onclick="showEnrollmentForm(currentCourse)">Enroll Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Enrollment Form Modal -->
+    <div class="modal fade" id="enrollmentModal" tabindex="-1" aria-labelledby="enrollmentModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header bg-secondary-custom text-white">
+                    <h5 class="modal-title" id="enrollmentModalLabel">Enroll in Course</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="enrollmentForm">
+                        <div class="mb-3">
+                            <label for="fullName" class="form-label">Full Name</label>
+                            <input type="text" class="form-control" id="fullName" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="phone" class="form-label">Phone Number</label>
+                            <input type="tel" class="form-control" id="phone" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="courseSelect" class="form-label">Selected Course</label>
+                            <input type="text" class="form-control" id="courseSelect" readonly>
+                        </div>
+                        <div class="mb-3">
+                            <label for="experience" class="form-label">Prior Experience</label>
+                            <select class="form-select" id="experience" required>
+                                <option value="">Select your experience level</option>
+                                <option value="beginner">Beginner</option>
+                                <option value="intermediate">Intermediate</option>
+                                <option value="advanced">Advanced</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="goals" class="form-label">Learning Goals</label>
+                            <textarea class="form-control" id="goals" rows="3" required></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary-custom" onclick="submitEnrollment()">Submit Enrollment</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Enrollment Confirmation Modal -->
+    <div class="modal fade" id="enrollmentConfirmationModal" tabindex="-1" aria-labelledby="enrollmentConfirmationModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header bg-success text-white">
+                    <h5 class="modal-title" id="enrollmentConfirmationModalLabel">Enrollment Confirmation</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Congratulations! You have successfully enrolled in the course. We'll send you an email with further instructions to get started.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Add smooth scrolling to all links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Animate elements on scroll
+        function animateElements() {
+            const elements = document.querySelectorAll('.animate__animated');
+            elements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+                if (elementTop < windowHeight - 100) {
+                    element.style.visibility = 'visible';
+                    element.classList.add('animate__fadeInUp');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', animateElements);
+        window.addEventListener('load', animateElements);
+
+        // Parallax effect
+        window.addEventListener('scroll', () => {
+            const parallaxElements = document.querySelectorAll('.parallax');
+            parallaxElements.forEach(element => {
+                const scrollPosition = window.pageYOffset;
+                element.style.backgroundPositionY = `${scrollPosition * 0.5}px`;
+            });
+        });
+
+        // Course details and enrollment
+        let currentCourse = '';
+        const courseDetails = {
+            'typography': {
+                title: 'Typography Fundamentals',
+                description: 'Master the art of typography to create visually appealing and effective designs.',
+                topics: [
+                    'Font selection and pairing',
+                    'Kerning, leading, and tracking',
+                    'Typographic hierarchy',
+                    'Responsive typography',
+                    'Typography in branding',
+                    'Experimental typography'
+                ],
+                duration: '6 weeks',
+                level: 'Beginner to Intermediate'
+            },
+            'color-theory': {
+                title: 'Color Theory and Application',
+                description: 'Learn to use color effectively in your designs to evoke emotions and enhance visual communication.',
+                topics: [
+                    'Color psychology and symbolism',
+                    'Color schemes and harmonies',
+                    'Color in branding and marketing',
+                    'Digital color management',
+                    'Color accessibility',
+                    'Color trends and forecasting'
+                ],
+                duration: '5 weeks',
+                level: 'Beginner to Intermediate'
+            },
+            'layout-design': {
+                title: 'Layout Design',
+                description: 'Create effective layouts for print and digital media that guide the viewer\'s eye and communicate your message clearly.',
+                topics: [
+                    'Grid systems and composition',
+                    'Visual hierarchy',
+                    'Responsive design principles',
+                    'Magazine and book layout',
+                    'Web and mobile layout',
+                    'Experimental layouts'
+                ],
+                duration: '7 weeks',
+                level: 'Intermediate'
+            },
+            'logo-design': {
+                title: 'Logo Design',
+                description: 'Learn to create memorable and effective logos that represent brands and communicate their values.',
+                topics: [
+                    'Logo design principles',
+                    'Vector graphics and scalability',
+                    'Brand identity systems',
+                    'Logo variations and applications',
+                    'Logo redesign and evolution',
+                    'Presenting logo concepts to clients'
+                ],
+                duration: '6 weeks',
+                level: 'Intermediate to Advanced'
+            },
+            'digital-illustration': {
+                title: 'Digital Illustration',
+                description: 'Master digital illustration techniques to create stunning artwork for various applications.',
+                topics: [
+                    'Digital drawing and painting techniques',
+                    'Texture creation and application',
+                    'Character design and concept art',
+                    'Editorial and commercial illustration',
+                    'Illustration for animation',
+                    'Building an illustration portfolio'
+                ],
+                duration: '8 weeks',
+                level: 'Intermediate to Advanced'
+            },
+            'print-production': {
+                title: 'Print Production',
+                description: 'Learn the essentials of print design and production to ensure your designs translate perfectly from screen to print.',
+                topics: [
+                    'File preparation for print',
+                    'Color management and color spaces',
+                    'Paper types and printing techniques',
+                    'Packaging design and production',
+                    'Large format printing',
+                    'Print finishing and special effects'
+                ],
+                duration: '5 weeks',
+                level: 'Intermediate'
+            }
+        };
+
+        function showCourseDetails(courseId) {
+            currentCourse = courseId;
+            const course = courseDetails[courseId];
+            const modalTitle = document.getElementById('courseDetailsModalLabel');
+            const modalContent = document.getElementById('courseDetailsContent');
+
+            modalTitle.textContent = course.title;
+            modalContent.innerHTML = `
+                <p>${course.description}</p>
+                <h6>Key Topics:</h6>
+                <ul>
+                    ${course.topics.map(topic => <li>${topic}</li>).join('')}
+                </ul>
+                <p><strong>Duration:</strong> ${course.duration}</p>
+                <p><strong>Level:</strong> ${course.level}</p>
+            `;
+
+            const modal = new bootstrap.Modal(document.getElementById('courseDetailsModal'));
+            modal.show();
+        }
+
+        function showEnrollmentForm(courseId) {
+            currentCourse = courseId;
+            const course = courseDetails[courseId];
+            document.getElementById('courseSelect').value = course.title;
+            
+            const courseDetailsModal = bootstrap.Modal.getInstance(document.getElementById('courseDetailsModal'));
+            if (courseDetailsModal) {
+                courseDetailsModal.hide();
+            }
+
+            const enrollmentModal = new bootstrap.Modal(document.getElementById('enrollmentModal'));
+            enrollmentModal.show();
+        }
+
+        function submitEnrollment() {
+            const form = document.getElementById('enrollmentForm');
+            if (form.checkValidity()) {
+                const enrollmentModal = bootstrap.Modal.getInstance(document.getElementById('enrollmentModal'));
+                enrollmentModal.hide();
+
+                const confirmationModal = new bootstrap.Modal(document.getElementById('enrollmentConfirmationModal'));
+                confirmationModal.show();
+
+                // Reset the form
+                form.reset();
+            } else {
+                form.reportValidity();
+            }
+        }
+    </script>
+</body>
+</html>

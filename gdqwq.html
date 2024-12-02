@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Web Development LMS</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <style>
+        :root {
+            --primary-color: #3498db;
+            --secondary-color: #2ecc71;
+            --accent-color: #e74c3c;
+            --dark-color: #34495e;
+            --light-color: #ecf0f1;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            color: var(--dark-color);
+        }
+
+        .bg-primary-custom {
+            background-color: var(--primary-color);
+        }
+
+        .bg-secondary-custom {
+            background-color: var(--secondary-color);
+        }
+
+        .bg-accent-custom {
+            background-color: var(--accent-color);
+        }
+
+        .text-primary-custom {
+            color: var(--primary-color);
+        }
+
+        .text-secondary-custom {
+            color: var(--secondary-color);
+        }
+
+        .text-accent-custom {
+            color: var(--accent-color);
+        }
+
+        .btn-primary-custom {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+            color: white;
+        }
+
+        .btn-primary-custom:hover {
+            background-color: #2980b9;
+            border-color: #2980b9;
+        }
+
+        .btn-secondary-custom {
+            background-color: var(--secondary-color);
+            border-color: var(--secondary-color);
+            color: white;
+        }
+
+        .btn-secondary-custom:hover {
+            background-color: #27ae60;
+            border-color: #27ae60;
+        }
+
+        .card {
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            margin-bottom: 20px;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .parallax {
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .text-shadow {
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        @media (max-width: 768px) {
+            .card {
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary-custom sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <i class="fas fa-code me-2"></i>WebDev LMS
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#features">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#courses">Courses</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#testimonials">Testimonials</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="bg-primary-custom text-white text-center py-5 parallax" style="background-image: url('/placeholder.svg?height=600&width=1200');">
+        <div class="container">
+            <h1 class="display-4 mb-3 animate__animated animate__fadeInDown text-shadow">Master Web Development</h1>
+            <p class="lead mb-4 animate__animated animate__fadeInUp animate__delay-1s text-shadow">Learn HTML, CSS, JavaScript, and more with our comprehensive courses</p>
+            <a href="#courses" class="btn btn-light btn-lg animate__animated animate__fadeInUp animate__delay-2s">Explore Courses</a>
+        </div>
+    </header>
+
+    <!-- Features Section -->
+    <section id="features" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5 animate__animated animate__fadeInDown">Why Choose Our Courses?</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 bg-secondary-custom text-white">
+                        <div class="card-body text-center">
+                            <i class="fas fa-laptop-code fa-3x mb-3"></i>
+                            <h5 class="card-title">Hands-on Projects</h5>
+                            <p class="card-text">Build real-world projects to apply your skills</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 bg-accent-custom text-white">
+                        <div class="card-body text-center">
+                            <i class="fas fa-users fa-3x mb-3"></i>
+                            <h5 class="card-title">Expert Instructors</h5>
+                            <p class="card-text">Learn from industry professionals with years of experience</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 bg-primary-custom text-white">
+                        <div class="card-body text-center">
+                            <i class="fas fa-certificate fa-3x mb-3"></i>
+                            <h5 class="card-title">Certification</h5>
+                            <p class="card-text">Earn certificates to showcase your skills to employers</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Courses Section -->
+    <section id="courses" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5 animate__animated animate__fadeInDown">Our Web Development Courses</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">HTML & CSS Fundamentals</h5>
+                            <p class="card-text">Learn the building blocks of web development</p>
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-check text-success me-2"></i>HTML5 Structure</li>
+                                <li><i class="fas fa-check text-success me-2"></i>CSS3 Styling</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Responsive Design</li>
+                            </ul>
+                            <div class="mt-3">
+                                <button class="btn btn-primary-custom me-2" onclick="showCourseDetails('html-css')">View Details</button>
+                                <button class="btn btn-secondary-custom" onclick="showEnrollmentForm('html-css')">Enroll Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">JavaScript Mastery</h5>
+                            <p class="card-text">Dive deep into modern JavaScript programming</p>
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-check text-success me-2"></i>ES6+ Features</li>
+                                <li><i class="fas fa-check text-success me-2"></i>DOM Manipulation</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Asynchronous JavaScript</li>
+                            </ul>
+                            <div class="mt-3">
+                                <button class="btn btn-primary-custom me-2" onclick="showCourseDetails('javascript')">View Details</button>
+                                <button class="btn btn-secondary-custom" onclick="showEnrollmentForm('javascript')">Enroll Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Bootstrap 5 for Responsive Design</h5>
+                            <p class="card-text">Create mobile-first, responsive websites with Bootstrap</p>
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-check text-success me-2"></i>Grid System</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Components & Utilities</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Customization</li>
+                            </ul>
+                            <div class="mt-3">
+                                <button class="btn btn-primary-custom me-2" onclick="showCourseDetails('bootstrap')">View Details</button>
+                                <button class="btn btn-secondary-custom" onclick="showEnrollmentForm('bootstrap')">Enroll Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">React.js Fundamentals</h5>
+                            <p class="card-text">Build dynamic user interfaces with React</p>
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-check text-success me-2"></i>Components & Props</li>
+                                <li><i class="fas fa-check text-success me-2"></i>State Management</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Hooks</li>
+                            </ul>
+                            <div class="mt-3">
+                                <button class="btn btn-primary-custom me-2" onclick="showCourseDetails('react')">View Details</button>
+                                <button class="btn btn-secondary-custom" onclick="showEnrollmentForm('react')">Enroll Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Node.js & Express</h5>
+                            <p class="card-text">Server-side JavaScript for building web applications</p>
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-check text-success me-2"></i>Node.js Basics</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Express Framework</li>
+                                <li><i class="fas fa-check text-success me-2"></i>RESTful APIs</li>
+                            </ul>
+                            <div class="mt-3">
+                                <button class="btn btn-primary-custom me-2" onclick="showCourseDetails('nodejs')">View Details</button>
+                                <button class="btn btn-secondary-custom" onclick="showEnrollmentForm('nodejs')">Enroll Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Full-Stack Web Development</h5>
+                            <p class="card-text">Become a well-rounded web developer</p>
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-check text-success me-2"></i>Front-end & Back-end</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Database Integration</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Deployment</li>
+                            </ul>
+                            <div class="mt-3">
+                                <button class="btn btn-primary-custom me-2" onclick="showCourseDetails('fullstack')">View Details</button>
+                                <button class="btn btn-secondary-custom" onclick="showEnrollmentForm('fullstack')">Enroll Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials" class="py-5 bg-light parallax" style="background-image: url('/placeholder.svg?height=600&width=1200');">
+        <div class="container">
+            <h2 class="text-center mb-5 animate__animated animate__fadeInDown">What Our Students Say</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <p class="card-text">"The courses are well-structured and the projects helped me build a strong portfolio. I landed my dream job thanks to these courses!"</p>
+                            <div class="d-flex align-items-center mt-3">
+                                <img src="/placeholder.svg?height=50&width=50" alt="Student 1" class="rounded-circle me-3">
+                                <div>
+                                    <h6 class="mb-0">John Doe</h6>
+                                    <small class="text-muted">Front-end Developer</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <p class="card-text">"As a designer transitioning to development, these courses provided the perfect roadmap. The instructors are knowledgeable and supportive."</p>
+                            <div class="d-flex align-items-center mt-3">
+                                <img src="/placeholder.svg?height=50&width=50" alt="Student 2" class="rounded-circle me-3">
+                                <div>
+                                    <h6 class="mb-0">Jane Smith</h6>
+                                    <small class="text-muted">UX Developer</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <p class="card-text">"The full-stack course was challenging but rewarding. I now have the confidence to build complete web applications from scratch."</p>
+                            <div class="d-flex align-items-center mt-3">
+                                <img src="/placeholder.svg?height=50&width=50" alt="Student 3" class="rounded-circle me-3">
+                                <div>
+                                    <h6 class="mb-0">Mike Johnson</h6>
+                                    <small class="text-muted">Full-stack Developer</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="bg-primary-custom text-white text-center py-5">
+        <div class="container">
+            <h2 class="mb-4 animate__animated animate__fadeInDown text-shadow">Ready to Start Your Web Development Journey?</h2>
+            <p class="lead mb-4 animate__animated animate__fadeInUp animate__delay-1s text-shadow">Join thousands of students who have transformed their careers with our courses</p>
+            <a href="#courses" class="btn btn-light btn-lg animate__animated animate__fadeInUp animate__delay-2s">Explore Courses</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3">
+        <div class="container">
+            <p>&copy; 2023 WebDev LMS. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Course Details Modal -->
+    <div class="modal fade" id="courseDetailsModal" tabindex="-1" aria-labelledby="courseDetailsModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header bg-primary-custom text-white">
+                    <h5 class="modal-title" id="courseDetailsModalLabel">Course Details</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="courseDetailsContent">
+                    <!-- Course details will be dynamically inserted here -->
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary-custom" onclick="showEnrollmentForm(currentCourse)">Enroll Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Enrollment Form Modal -->
+    <div class="modal fade" id="enrollmentModal" tabindex="-1" aria-labelledby="enrollmentModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header bg-secondary-custom text-white">
+                    <h5 class="modal-title" id="enrollmentModalLabel">Enroll in Course</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="enrollmentForm">
+                        <div class="mb-3">
+                            <label for="fullName" class="form-label">Full Name</label>
+                            <input type="text" class="form-control" id="fullName" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="phone" class="form-label">Phone Number</label>
+                            <input type="tel" class="form-control" id="phone" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="courseSelect" class="form-label">Selected Course</label>
+                            <input type="text" class="form-control" id="courseSelect" readonly>
+                        </div>
+                        <div class="mb-3">
+                            <label for="experience" class="form-label">Prior Experience</label>
+                            <select class="form-select" id="experience" required>
+                                <option value="">Select your experience level</option>
+                                <option value="beginner">Beginner</option>
+                                <option value="intermediate">Intermediate</option>
+                                <option value="advanced">Advanced</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="goals" class="form-label">Learning Goals</label>
+                            <textarea class="form-control" id="goals" rows="3" required></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary-custom" onclick="submitEnrollment()">Submit Enrollment</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Enrollment Confirmation Modal -->
+    <div class="modal fade" id="enrollmentConfirmationModal" tabindex="-1" aria-labelledby="enrollmentConfirmationModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header bg-success text-white">
+                    <h5 class="modal-title" id="enrollmentConfirmationModalLabel">Enrollment Confirmation</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Congratulations! You have successfully enrolled in the course. We'll send you an email with further instructions to get started.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Add smooth scrolling to all links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Animate elements on scroll
+        function animateElements() {
+            const elements = document.querySelectorAll('.animate__animated');
+            elements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+                if (elementTop < windowHeight - 100) {
+                    element.style.visibility = 'visible';
+                    element.classList.add('animate__fadeInUp');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', animateElements);
+        window.addEventListener('load', animateElements);
+
+        // Parallax effect
+        window.addEventListener('scroll', () => {
+            const parallaxElements = document.querySelectorAll('.parallax');
+            parallaxElements.forEach(element => {
+                const scrollPosition = window.pageYOffset;
+                element.style.backgroundPositionY = `${scrollPosition * 0.5}px`;
+            });
+        });
+
+        // Course details and enrollment
+        let currentCourse = '';
+        const courseDetails = {
+            'html-css': {
+                title: 'HTML & CSS Fundamentals',
+                description: 'Master the core technologies of web development with our comprehensive HTML and CSS course. You\'ll learn how to structure web content, style it beautifully, and create responsive layouts that look great on any device.',
+                topics: [
+                    'HTML5 semantic elements',
+                    'CSS3 styling and animations',
+                    'Flexbox and Grid layouts',
+                    'Responsive web design principles',
+                    'CSS preprocessors (Sass)',
+                    'Web accessibility best practices'
+                ],
+                duration: '6 weeks',
+                level: 'Beginner'
+            },
+            'javascript': {
+                title: 'JavaScript Mastery',
+                description: 'Take your programming skills to the next level with our in-depth JavaScript course. From basic syntax to advanced concepts, you\'ll learn how to create dynamic and interactive web applications.',
+                topics: [
+                    'ES6+ features and syntax',
+                    'DOM manipulation and events',
+                    'Asynchronous JavaScript (Promises, Async/Await)',
+                    'Object-Oriented Programming in JavaScript',
+                    'Functional programming concepts',
+                    'Error handling and debugging'
+                ],
+                duration: '8 weeks',
+                level: 'Intermediate'
+            },
+            'bootstrap': {
+                title: 'Bootstrap 5 for Responsive Design',
+                description: 'Learn how to rapidly develop responsive websites using Bootstrap 5. This course will teach you how to leverage Bootstrap\'s powerful grid system, components, and utilities to create modern and mobile-first web designs.',
+                topics: [
+                    'Bootstrap 5 grid system',
+                    'Responsive breakpoints',
+                    'Bootstrap components (Navbar, Cards, Forms, etc.)',
+                    'Customizing Bootstrap with Sass',
+                    'Bootstrap utilities and helpers',
+                    'Building responsive layouts with Bootstrap'
+                ],
+                duration: '4 weeks',
+                level: 'Beginner to Intermediate'
+            },
+            'react': {
+                title: 'React.js Fundamentals',
+                description: 'Dive into the world of component-based web development with React.js. Learn how to build efficient and scalable user interfaces using the most popular front-end library.',
+                topics: [
+                    'React components and JSX',
+                    'State and props management',
+                    'Hooks (useState, useEffect, useContext, etc.)',
+                    'React Router for navigation',
+                    'State management with Context API and Redux',
+                    'Testing React applications'
+                ],
+                duration: '8 weeks',
+                level: 'Intermediate'
+            },
+            'nodejs': {
+                title: 'Node.js & Express',
+                description: 'Learn server-side JavaScript programming with Node.js and Express. This course will teach you how to build scalable and efficient web applications and APIs using JavaScript on the server.',
+                topics: [
+                    'Node.js fundamentals and event loop',
+                    'Express.js framework basics',
+                    'RESTful API development',
+                    'Database integration (MongoDB)',
+                    'Authentication and authorization',
+                    'Deployment and scaling Node.js applications'
+                ],
+                duration: '6 weeks',
+                level: 'Intermediate to Advanced'
+            },
+            'fullstack': {
+                title: 'Full-Stack Web Development',
+                description: 'Become a well-rounded web developer with our comprehensive full-stack course. Learn both front-end and back-end technologies to build complete web applications from start to finish.',
+                topics: [
+                    'Front-end development (HTML, CSS, JavaScript, React)',
+                    'Back-end development (Node.js, Express)',
+                    'Database design and management (SQL and NoSQL)',
+                    'RESTful and GraphQL APIs',
+                    'Authentication and security',
+                    'Deployment and DevOps basics'
+                ],
+                duration: '12 weeks',
+                level: 'Intermediate to Advanced'
+            }
+        };
+
+        function showCourseDetails(courseId) {
+            currentCourse = courseId;
+            const course = courseDetails[courseId];
+            const modalTitle = document.getElementById('courseDetailsModalLabel');
+            const modalContent = document.getElementById('courseDetailsContent');
+
+            modalTitle.textContent = course.title;
+            modalContent.innerHTML = `
+                <p>${course.description}</p>
+                <h6>Key Topics:</h6>
+                <ul>
+                    ${course.topics.map(topic => `<li>${topic}</li>`).join('')}
+                </ul>
+                <p><strong>Duration:</strong> ${course.duration}</p>
+                <p><strong>Level:</strong> ${course.level}</p>
+            `;
+
+            const modal = new bootstrap.Modal(document.getElementById('courseDetailsModal'));
+            modal.show();
+        }
+
+        function showEnrollmentForm(courseId) {
+            currentCourse = courseId;
+            const course = courseDetails[courseId];
+            document.getElementById('courseSelect').value = course.title;
+            
+            const courseDetailsModal = bootstrap.Modal.getInstance(document.getElementById('courseDetailsModal'));
+            if (courseDetailsModal) {
+                courseDetailsModal.hide();
+            }
+
+            const enrollmentModal = new bootstrap.Modal(document.getElementById('enrollmentModal'));
+            enrollmentModal.show();
+        }
+
+        function submitEnrollment() {
+            const form = document.getElementById('enrollmentForm');
+            if (form.checkValidity()) {
+                const enrollmentModal = bootstrap.Modal.getInstance(document.getElementById('enrollmentModal'));
+                enrollmentModal.hide();
+
+                const confirmationModal = new bootstrap.Modal(document.getElementById('enrollmentConfirmationModal'));
+                confirmationModal.show();
+
+                // Reset the form
+                form.reset();
+            } else {
+                form.reportValidity();
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - EduTech LMS</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    
+    <link rel="stylesheet" href="about.css">
+    <style>
+        :root {
+            --navbar-height: 76px;
+            --primary-color: #4a90e2;
+            --secondary-color: #f39c12;
+            --accent-color: #e74c3c;
+        }
+        </style>
+</head>
+<body>
+   <!-- navbar -->
+   <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+        <!-- Logo -->
+        <a class="navbar-brand" href="index.html">
+            <i class="fas fa-graduation-cap me-2"></i>EduLearn
+        </a>
+
+        <!-- Search Box (visible on mobile) -->
+        <div class="d-flex align-items-center ms-auto me-2 d-lg-none">
+            <button class="btn search-toggle text-white" type="button">
+                <i class="fas fa-search"></i>
+            </button>
+        </div>
+
+        <!-- Toggle Button -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar Content -->
+        <div class="collapse navbar-collapse" id="navbarContent">
+            <!-- Search Box (desktop) -->
+            <div class="search-box mx-auto d-none d-lg-block">
+                <input type="text" class="search-input" placeholder="Search courses...">
+                <i class="fas fa-search search-icon"></i>
+            </div>
+
+            <!-- Navigation Links -->
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Categories.html">Categories</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="services.html">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">About us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link contact-btn" href="contacts.html">Contact Us</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Mobile Search Overlay -->
+<div class="search-overlay">
+    <div class="search-overlay-content">
+        <input type="text" class="search-input-mobile" placeholder="Search courses...">
+        <button class="btn-close search-close"></button>
+    </div>
+</div>
+
+<!-- Add Navbar Spacer -->
+<div class="navbar-spacer"></div>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Empowering Education Through Technology</h1>
+            <p>EduTech LMS is revolutionizing the way we learn and teach, providing cutting-edge tools for educators and students alike.</p>
+        </div>
+    </section>
+
+    <section class="features py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Why Choose EduTech LMS?</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="feature-card animate-on-scroll">
+                        <div class="feature-icon">
+                            <i class="bi bi-book"></i>
+                        </div>
+                        <h3>Interactive Learning</h3>
+                        <p>Engage with course material through interactive quizzes, discussions, and multimedia content.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card animate-on-scroll">
+                        <div class="feature-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3>Progress Tracking</h3>
+                        <p>Monitor your learning journey with detailed analytics and progress reports.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card animate-on-scroll">
+                        <div class="feature-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3>Collaborative Environment</h3>
+                        <p>Connect with peers and instructors through forums, group projects, and live sessions.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="stats">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="stat-item">
+                        <div class="stat-number" id="studentCount">0</div>
+                        <div>Students Enrolled</div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="stat-item">
+                        <div class="stat-number" id="courseCount">0</div>
+                        <div>Courses Offered</div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="stat-item">
+                        <div class="stat-number" id="instructorCount">0</div>
+                        <div>Expert Instructors</div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="stat-item">
+                        <div class="stat-number" id="satisfactionRate">0</div>
+                        <div>Satisfaction Rate</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="team py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Meet Our Team</h2>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="team-member animate-on-scroll">
+                        <img src="assests/profile4.jpg" alt="Team Member 1">
+                        <h4>John Doe</h4>
+                        <p>Founder & CEO</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="team-member animate-on-scroll">
+                        <img src="assests/profile3.jpg" alt="Team Member 2">
+                        <h4>Jane Smith</h4>
+                        <p>Chief Learning Officer</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="team-member animate-on-scroll">
+                        <img src="assests/profile2.jpg" alt="Team Member 3">
+                        <h4>Mike Johnson</h4>
+                        <p>Head of Technology</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="team-member animate-on-scroll">
+                        <img src="assests/profile1.jpg" alt="Team Member 4">
+                        <h4>Sarah Lee</h4>
+                        <p>Customer Success Manager</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   <!-- footer page  -->
+   <main>
+    <!-- Main content would go here -->
+</main>
+<footer class="footer">
+    <div class="container">
+        <div class="footer-top">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                    <h5 class="footer-heading">About LearnSmart</h5>
+                    <p>LearnSmart is a cutting-edge Learning Management System designed to empower learners and educators worldwide. Our platform offers a diverse range of courses and tools to enhance your learning experience.</p>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                    <h5 class="footer-heading">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="footer-link">Home</a></li>
+                        <li><a href="#" class="footer-link">Courses</a></li>
+                        <li><a href="#" class="footer-link">Instructors</a></li>
+                        <li><a href="#" class="footer-link">Student Dashboard</a></li>
+                        <li><a href="#" class="footer-link">Help Center</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                    <h5 class="footer-heading">Popular Courses</h5>
+                    <div>
+                        <a href="#" class="course-pill">Web Development</a>
+                        <a href="#" class="course-pill">Data Science</a>
+                        <a href="#" class="course-pill">Machine Learning</a>
+                        <a href="#" class="course-pill">Digital Marketing</a>
+                        <a href="#" class="course-pill">Graphic Design</a>
+                        <a href="#" class="course-pill">Business Analytics</a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                    <h5 class="footer-heading">Stay Connected</h5>
+                    <p>Subscribe to our newsletter for updates and special offers.</p>
+                    <form id="newsletter-form" class="mb-3">
+                        <div class="input-group">
+                            <input type="email" class="form-control newsletter-input" placeholder="Your email" aria-label="Your email" required>
+                            <button class="btn btn-subscribe" type="submit">Subscribe</button>
+                        </div>
+                    </form>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="social-icon" aria-label="Twitter"><i class="bi bi-twitter"></i></a>
+                        <a href="#" class="social-icon" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                        <a href="#" class="social-icon" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="social-icon" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom text-center">
+            <div class="row">
+                <div class="col-md-6 text-md-start">
+                    <p>&copy; 2023 LearnSmart LMS. All rights reserved.</p>
+                </div>
+                 <div class="col-md-6 text-md-end">
+                    <a href="#" class="footer-bottom-link me-3">Privacy Policy</a>
+                    <a href="#" class="footer-bottom-link me-3">Terms of Service</a>
+                    <a href="#" class="footer-bottom-link">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script> -->
+    <script src="about.js"></script>
+    <script>
+        // // Animate stats
+        // function animateValue(id, start, end, duration) {
+        //     let range = end - start;
+        //     let current = start;
+        //     let increment = end > start ? 1 : -1;
+        //     let stepTime = Math.abs(Math.floor(duration / range));
+        //     let obj = document.getElementById(id);
+        //     let timer = setInterval(function() {
+        //         current += increment;
+        //         obj.innerHTML = current;
+        //         if (current == end) {
+        //             clearInterval(timer);
+        //         }
+        //     }, stepTime);
+        // }
+
+        // // Trigger animations when scrolled into view
+        // function handleScrollAnimations() {
+        //     const elements = document.querySelectorAll('.animate-on-scroll');
+        //     elements.forEach((el) => {
+        //         if (isElementInViewport(el)) {
+        //             el.classList.add('show');
+        //         }
+        //     });
+        // }
+
+        // function isElementInViewport(el) {
+        //     const rect = el.getBoundingClientRect();
+        //     return (
+        //         rect.top >= 0 &&
+        //         rect.left >= 0 &&
+        //         rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        //         rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+        //     );
+        // }
+
+        // // Initialize animations
+        // document.addEventListener('DOMContentLoaded', function() {
+        //     animateValue("studentCount", 0, 10000, 2000);
+        //     animateValue("courseCount", 0, 500, 2000);
+        //     animateValue("instructorCount", 0, 200, 2000);
+        //     animateValue("satisfactionRate", 0, 98, 2000);
+
+        //     window.addEventListener('scroll', handleScrollAnimations);
+        //     handleScrollAnimations(); // Trigger once on load
+        // });
+    </script>
+</body>
+</html>
